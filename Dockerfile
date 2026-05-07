@@ -13,7 +13,7 @@ COPY frontend/package.json ./frontend/
 
 # Install pnpm using corepack (built into Node.js 22)
 RUN corepack enable && corepack prepare pnpm@latest --activate
-RUN pnpm config set only-built-dependencies better-sqlite3 cpu-features esbuild protobufjs ssh2
+
 # Install all dependencies (both root and frontend workspace)
 # This includes devDependencies needed for building
 RUN pnpm install
